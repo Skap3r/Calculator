@@ -476,7 +476,6 @@ public class Calculator extends javax.swing.JFrame {
         icons.add(loadIcon("icons/21-128.png"));
         
         setIconImages(icons);
-//        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icons/21-32.png")));
     }
     
     private Image loadIcon(String name) {
