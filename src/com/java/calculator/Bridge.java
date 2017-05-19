@@ -153,6 +153,7 @@ public class Bridge {
         this.firstNum = 0;
         this.secondNum = 0;
         this.allowNumber = false;
+        this.pointPressed = false;
         this.sb.delete(0, this.sb.length());
     }
     
