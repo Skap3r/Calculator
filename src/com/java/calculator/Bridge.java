@@ -53,6 +53,8 @@ public class Bridge {
             if (s.equals(CLEAR)) {
                 clear();
                 return DEFAULT;
+            } else if (s.equals("=")) {
+                return this.sb.toString();
             } else if (this.allowNumber && !checkIfKey(s)) {
                 this.sb.delete(0, this.sb.length());
                 this.sb.append(s);
@@ -86,7 +88,9 @@ public class Bridge {
             return (en.getData(parseInput()));
         }
         
-        this.sb.append(s);
+        if (!s.equals("="))
+            this.sb.append(s);
+        
         return this.sb.toString();
     }
     
