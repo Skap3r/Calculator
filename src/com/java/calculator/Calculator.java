@@ -7,6 +7,7 @@ package com.java.calculator;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.ImageIcon;
@@ -166,6 +167,7 @@ public class Calculator extends javax.swing.JFrame {
         });
 
         three.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        three.setMnemonic(KeyEvent.VK_NUMPAD3);
         three.setText("3");
         three.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -199,6 +201,7 @@ public class Calculator extends javax.swing.JFrame {
 
         equals.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         equals.setText("=");
+        equals.setToolTipText("alt + click to display history. (Not implemented yet)");
         equals.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 equalsActionPerformed(evt);
