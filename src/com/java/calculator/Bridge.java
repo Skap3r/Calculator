@@ -12,7 +12,7 @@ public class Bridge {
     private double firstNum, secondNum;
     private ArrayList keyInputs;
     private static final String DEFAULT = "0";
-    private static final String BACK_SPACE = "BSpc";
+    private static final String BACKSPACE = "BSpc";
     private static final String CLEAR_ENTRY = "CE";
     private static final String CLEAR = "C";
     private boolean allowNumber, pointPressed;
@@ -50,7 +50,7 @@ public class Bridge {
             this.pointPressed = false;
         
         if (s.equals(CLEAR) || this.allowNumber) {
-            if (s.equals(CLEAR)) {
+            if (s.equals(CLEAR) || s.equals(BACKSPACE) || s.equals(CLEAR_ENTRY)) {
                 clear();
                 return DEFAULT;
             } else if (s.equals("=")) {
@@ -68,7 +68,7 @@ public class Bridge {
         if (s.equals(CLEAR_ENTRY))
             return clearEntry();
         
-        if (s.equals(BACK_SPACE)) {
+        if (s.equals(BACKSPACE)) {
             if(!this.allowNumber)
                 return backSpace();
         }
